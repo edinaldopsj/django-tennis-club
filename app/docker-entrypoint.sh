@@ -9,7 +9,7 @@ then
     echo "MySQL started"
 fi
 
-# Décommenter pour supprimer la bdd à chaque redémarrage (danger)
+# Remove comment to Clear entire database below - 2 next lines"
 # echo "Clear entire database"
 # python manage.py flush --no-input
 
