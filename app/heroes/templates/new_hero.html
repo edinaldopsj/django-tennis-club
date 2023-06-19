@@ -1,0 +1,58 @@
+{% extends 'master.html' %}
+
+  {% block title %}
+  Novo Herói
+  {% endblock %}
+  
+  {% block content %}
+
+    <div class="card mt-2">
+      <div class="card-header">Novo fabricante</div>
+      <div class="card-body container">
+        <form action="addhero/" method="post">
+          {% csrf_token %}
+
+          <div class="row">
+            <div class="col-12">
+              Nome do Herói:<br />
+              <input name="name" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-2">
+              Força:<br />
+              <input name="str" />
+            </div>
+            <div class="col-sm-12 col-md-2">
+              Destreza:<br />
+              <input name="dex" />
+            </div>
+            <div class="col-sm-12 col-md-2">
+              Constituição:<br />
+              <input name="con" />
+            </div>
+            <div class="col-sm-12 col-md-2">
+              Inteligência:<br />
+              <input name="int" />
+            </div>
+            <div class="col-sm-12 col-md-2">
+              Sabedoria:<br />
+              <input name="wis" />
+            </div>
+            <div class="col-sm-12 col-md-2">
+              Carisma:<br />
+              <input name="cha" />
+            </div>
+          </div>
+
+          <div class="pt-2 mt-4">
+            <button class="btn btn-success" type="submit">Salvar</button>
+          </div>
+        </form>
+        <p class="p-2">
+          <a href="/heroes/">Voltar</a>
+        </p>
+      </div>
+    </div>
+  {% endblock %}
