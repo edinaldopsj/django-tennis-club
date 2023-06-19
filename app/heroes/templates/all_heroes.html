@@ -1,0 +1,23 @@
+{% extends 'master.html' %}
+
+{% block title %}
+lista de membros cadastrados 
+{% endblock  %}
+
+{% block content %}
+<div class="card mt-2">
+    <div class="d-flex card-header justify-content-between">
+        <span class="lead">Meus heróis cadastrados</span>
+        <a href="/new_hero/">
+          <button type="button" class="btn btn-primary">Novo herói</button>
+        </a>
+      </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <!-- {% for x in mymembers %}
+            <li class="list-group-item"><a href="details/{{x.id}}">{{x.firstname}} {{x.lastname}}</a></li>
+            {% endfor %} -->
+        </ul>
+    </div>
+</div>
+{% endblock  %}
