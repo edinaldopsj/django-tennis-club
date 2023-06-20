@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 
 {% block title %}
-lista de membros cadastrados 
+Heróis
 {% endblock  %}
 
 {% block content %}
@@ -14,9 +14,23 @@ lista de membros cadastrados
       </div>
     <div class="card-body">
         <ul class="list-group">
-            <!-- {% for x in mymembers %}
-            <li class="list-group-item"><a href="details/{{x.id}}">{{x.firstname}} {{x.lastname}}</a></li>
-            {% endfor %} -->
+            {% for hero in myheroes %}
+            <li class="d-flex justify-content-between list-group-item">
+              <a href="/hero_detail/{{hero.id}}">{{hero.name}}</a>
+              <div>
+                <a href="/update_hero/{{ hero.id }}" class="ms-2 btn btn-success fa-solid fa-pencil">
+                  <span class="material-symbols-outlined">
+                      Editar
+                  </span>
+                </a>
+                <a href="/delete_hero/{{ hero.id }}" class="ms-2 btn btn-danger fa-solid fa-trash-can">
+                  <span class="material-symbols-outlined">
+                      Remover
+                  </span>
+                </a>
+              </div>
+            </li>
+            {% endfor %}
         </ul>
     </div>
 </div>

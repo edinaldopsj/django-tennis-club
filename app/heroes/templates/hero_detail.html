@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Detalhes - {{ hero.name }}
+{% endblock  %}
+
+{% block content %}
+<div class="card mt-2">
+    <div class="card-heard">
+        Visualizar Herói - {{ hero.name }}
+    </div>
+    <div class="card-body">
+        <h1>{{ hero.name }}</h1>
+
+        <p><strong>Nome:</strong> {{ hero.name }}</p>
+
+        <p><strong>Força:</strong> {{ hero.str }}</p>
+        <p><strong>Inteligência:</strong> {{ hero.int }}</p>
+        <p><strong>Agilidade:</strong> {{ hero.dex }}</p>
+        <p><strong>Constituição:</strong> {{ hero.con }}</p>
+        <p><strong>Sabedoria:</strong> {{ hero.wis }}</p>
+        <p><strong>Carisma:</strong> {{ hero.cha }}</p>
+
+        <p><a href="/heroes">Voltar</a></p>
+
+    </div>
+</div>
+{% endblock %}

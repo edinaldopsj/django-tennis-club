@@ -9,7 +9,7 @@
     <div class="card mt-2">
       <div class="card-header">Novo fabricante</div>
       <div class="card-body container">
-        <form action="addhero/" method="post">
+        <form action="/add_hero/" method="post">
           {% csrf_token %}
 
           <div class="row">
@@ -22,27 +22,27 @@
           <div class="row">
             <div class="col-sm-12 col-md-2">
               Força:<br />
-              <input name="str" />
+              <input name="str" required />
             </div>
             <div class="col-sm-12 col-md-2">
               Destreza:<br />
-              <input name="dex" />
+              <input name="dex" required />
             </div>
             <div class="col-sm-12 col-md-2">
               Constituição:<br />
-              <input name="con" />
+              <input name="con"  required />
             </div>
             <div class="col-sm-12 col-md-2">
               Inteligência:<br />
-              <input name="int" />
+              <input name="int"  required />
             </div>
             <div class="col-sm-12 col-md-2">
               Sabedoria:<br />
-              <input name="wis" />
+              <input name="wis"  required />
             </div>
             <div class="col-sm-12 col-md-2">
               Carisma:<br />
-              <input name="cha" />
+              <input name="cha" required/>
             </div>
           </div>
 
